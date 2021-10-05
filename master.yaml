@@ -1,0 +1,19 @@
+ssh_authorized_keys:
+- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCh3c5riXOn2+QBr9nN5bAR1wKX0Va/AOcF2vcmkRtF1mFAUL5lYaN3zWnw8pOoq96ST48tR5Fq2sGv1X3b96orc8nraqTeBMIzIzbK5W8dfCW9sX8xpc9BTP3NiZzZqaZjOBocAnP9k7IyUo5PmHfWEdbKcPsxvp089tSv8FhSPCxj4BmoneqUrPIqvufKnJiTbHSC1RVxdAAqA+2YJhALbsqwK6QsmKkD/vWz3KCpx6WJbpqQQ/kmf0jUXys75nFuliiykedubAgNLBOcdUN7OBEz4ZS/ILGtTyobv/rgclFF/sxFS1kw0FRGi5VlYDyDHVMR43RqKHN9okRG7CQgbsdgPeabY53xkQ85vjLoYXObKHen69kPXTAF3OZAfVWUrMJjKGDqlbAhPV9CceQCtFkm08P6c24P2oqr+lxGFCFSRPtsTODBu1Rk8PyKDt2oWaok5D4uJevAHHq4PPZoNYXbz7QpmETLJmeNDIM/tBOvm6S3UixQMQBqbuW7YnM= adam@Adams-MBP
+hostname: k3os-master-lab
+
+k3os:
+  environment:
+    K3S_NODE_NAME: kos-master-lab.home
+    K3S_DATASTORE_ENDPOINT: "postgres://k3s:k3spassword@postgres-lab.home:5432/kubernetes"
+  k3s_args:
+  - server
+  - --disable=traefik
+  - --disable=servicelb
+  # modules:
+  # - kvm
+  # - nvme
+  #password: "$1$guqOCZgB$MaDgmEqOxX9q2x0dfal73/"
+  # taints:
+  # - node-role.kubernetes.io/master=true:NoSchedule
+
