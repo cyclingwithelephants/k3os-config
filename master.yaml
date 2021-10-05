@@ -3,9 +3,9 @@ ssh_authorized_keys:
 hostname: k3os-master-lab
 
 k3os:
-  environment:
-    K3S_NODE_NAME: kos-master-lab.home
-    K3S_DATASTORE_ENDPOINT: "postgres://k3s:k3spassword@postgres-lab.home:5432/kubernetes"
+#  environment:
+#   K3S_NODE_NAME: kos-master-lab.home
+#   K3S_DATASTORE_ENDPOINT: "postgres://k3s:k3spassword@postgres-lab.home:5432/kubernetes"
   k3s_args:
   - server
   - --disable=traefik
