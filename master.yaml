@@ -4,6 +4,7 @@ hostname: k3os-master-lab
 k3os:
   k3s_args:
   - server
+  - --cluster-init
   - --disable=traefik
   - --disable=servicelb
   - --disable=local-storage
@@ -11,6 +12,7 @@ k3os:
   - cdrom
   dns_nameservers:
   - 1.1.1.1
+  - 8.8.8.8
   ntp_servers:
   - 0.us.pool.ntp.org
   - 1.us.pool.ntp.org
